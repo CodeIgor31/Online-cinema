@@ -1,0 +1,13 @@
+<div class='top'>
+<% if @flag == true %>
+<div class='alert alert-info'>
+        <strong id='msg'><%= flash[:notice] %></strong>
+</div> 
+  <ul>
+  <% else %>
+    <% current_user.errors.each do |error| %>
+       <div class='alert alert-info'><li><%= error.full_message %></li></div>
+    <% end %>
+  </ul>
+  <% end %>
+ </div>

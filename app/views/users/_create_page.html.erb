@@ -1,0 +1,9 @@
+<div class='top'>
+<% unless @user.valid? %>
+  <ul>
+    <% @user.errors.each do |error| %>
+       <div class='alert alert-info'><li><%= error.full_message %></li></div>
+    <% end %>
+  </ul>
+  <% end %>
+ </div>

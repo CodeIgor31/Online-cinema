@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Спасибо за регистрацию в онлайн-кинотеатре BestWatch, <%= @user.login %></h1>
+    <p>
+      Вы сделали правильный выбор, надеемся, что вскоре вы станете нашим постоянным клиентом
+    </p>
+    <p>
+<p>
+Чтобы продолжить, пройди по ссылке ниже
+  <%= link_to 'Подвердить', confirm_email_user_url(@user.confirm_token, email: @user.email) %>
+</p>
+    </p>
+    <p>Всего самого наилучшего, хорошего дня!</p>
+  </body>
+</html>

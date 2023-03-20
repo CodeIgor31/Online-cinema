@@ -1,0 +1,16 @@
+<h4>Регистрация</h4>
+<%= form_with model: @user, url: '/users/create', nethod: :post do |form| %>
+  <p><%= form.label :email, "Введите email" %></p>
+  <p><%= form.email_field :email, placeholder: 'E-mail', class: 'form-control', id: 'email' %></p>
+  <p><%= form.label :login, "Введите логин" %></p>
+  <p><%= form.text_field :login, placeholder: 'Логин', class: 'form-control', id: 'login' %></p>
+  <p><%= form.label :phone, "Введите номер телефона"%></p>
+  <p><%= form.text_field :phone, class: 'form-control', id: 'phone' %></p>
+  <p><%= form.label :password, "Введите пароль" %></p>
+  <p><%= form.password_field :password, class: 'form-control', id: 'pass' %></p>
+  <p><%= form.label :password_confirmation, "Повторите пароль" %></p>
+  <p><%= form.password_field :password_confirmation, class: 'form-control', id: 'pass_conf' %></p>
+  <p><%= form.submit("Зарегистрироваться", id: 'btn') %></p>
+<% end %>
+
+<div id='error_response-container'></div>

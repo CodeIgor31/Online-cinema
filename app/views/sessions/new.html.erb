@@ -1,0 +1,9 @@
+<h1>Войти в аккаунт</h1>
+
+<%= form_with url: session_path do |form| %>
+  <p><%= form.label :email, "Введите email" %></p>
+  <p><%= form.email_field :email, class: 'form-control', id: 'log_mail' %></p>
+  <p><%= form.label :password, "Введите пароль" %></p>
+  <p><%= form.password_field :password, class: 'form-control', id: 'log_pass' %></p>
+  <p><%= form.submit("Войти", id: 'log_btn') %></p>
+<% end %>

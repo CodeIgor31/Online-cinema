@@ -1,0 +1,16 @@
+<h1>Редактирование профиля</h1>
+<%= form_with model: current_user, url: '/users/update', method: :post do |form| %>
+  <p><%= form.label :email, "Обновите email" %></p>
+  <p><%= form.email_field :email, placeholder: 'E-mail', class: 'form-control', id: 'email' %></p>
+  <p><%= form.label :password, "Обновите пароль" %></p>
+  <p><%= form.password_field :password, class: 'form-control', id: 'passw' %></p>
+  <p><%= form.label :password_confirmation, "Повторите пароль" %></p>
+  <p><%= form.password_field :password_confirmation, class: 'form-control', id: 'passw_conf' %></p>
+  <p><%= form.label :phone, "Обновите номер" %></p>
+  <p><%= form.text_field :phone, class: 'form-control', id: 'number' %></p>
+  <p><%= form.label :old_password, "Введите старый пароль" %></p>
+  <p><%= form.password_field :old_password, class: 'form-control', id: 'passw_old' %></p>
+  <p><%= form.submit("Обновить", id: 'btn_up_user') %></p>
+<% end %>
+
+<div id='error_response-container'></div>
